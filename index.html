@@ -309,10 +309,38 @@
         </div>
       </div>
     </footer>
-<!-- start Gist JS code-->
 <script>
-    (function(d,h,w){var gist=w.gist=w.gist||[];gist.methods=['trackPageView','identify','track','setAppId'];gist.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);gist.push(e);return gist;}};for(var i=0;i<gist.methods.length;i++){var c=gist.methods[i];gist[c]=gist.factory(c)}s=d.createElement('script'),s.src="https://widget-testing.getgist.com",s.async=!0,e=d.getElementsByTagName(h)[0],e.appendChild(s),s.addEventListener('load',function(e){},!1),gist.setAppId("9bipx36y"),gist.trackPageView()})(document,'head',window);
+
+
+    (function (d,h,w) {
+        var convertfox = w.convertfox = w.convertfox || [];
+        convertfox.methods = [ 'trackPageView', 'identify', 'track', 'setAppId' ];
+        // doubt
+        convertfox.factory = function(method){
+            return function(){
+                var args = Array.prototype.slice.call(arguments);
+                args.unshift(method);
+                convertfox.push(args);
+                return convertfox;
+            };
+        };
+        for (var i = 0; i < convertfox.methods.length; i++) {
+            var key = convertfox.methods[i];
+            convertfox[key] = convertfox.factory(key);
+        }
+
+        s=d.createElement('script');
+        s.src="http://127.0.0.1:5050/chat-widget/analytics.js";
+        s.async = true;
+        e=d.getElementsByTagName(h)[0];
+        e.appendChild(s);
+        s.addEventListener('load', function (e) { }, false);
+        // console.log('%c I am first in snippet', 'background: #222; color: #bada55')
+        convertfox.setAppId("lkxodqji");
+        // console.log('%c I am second in snippet','background: #222; color: #bada55')
+        convertfox.trackPageView();
+       //doubt // convertfox.identify(3228990, {email:'kjsdfkjsdkjf@mallow-tech.com'});
+    })(document, 'head', window);
 </script>
-<!-- end Gist JS code-->
   </body>
 </html>
